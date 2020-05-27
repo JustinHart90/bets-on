@@ -12,8 +12,8 @@ import {
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
-import './Menu.css';
+import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, homeSharp, homeOutline, playOutline, playSharp, timeOutline, timeSharp, refreshCircleOutline, refreshCircleSharp, listOutline, listSharp, listCircleOutline, listCircleSharp } from 'ionicons/icons';
+import './css/Menu.css';
 
 interface AppPage {
   url: string;
@@ -24,44 +24,38 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
-    url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    title: 'Home',
+    url: '/Home',
+    iosIcon: homeOutline,
+    mdIcon: homeSharp
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    title: 'Lobby',
+    url: '/Lobby',
+    iosIcon: listCircleOutline,
+    mdIcon: listCircleSharp
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    title: 'Live',
+    url: '/Live',
+    iosIcon: playOutline,
+    mdIcon: playSharp
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    title: 'Upcoming',
+    url: '/Upcoming',
+    iosIcon: timeOutline,
+    mdIcon: timeSharp
   },
   {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
+    title: 'Recent',
+    url: '/Recent',
+    iosIcon: refreshCircleOutline,
+    mdIcon: refreshCircleSharp
   }
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = ['Friends', 'Family', 'Work', 'NFL', 'NBA', 'NHL', 'MLB', 'NCAA', 'NCAAW'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
