@@ -1,0 +1,7 @@
+{
+  "name": "bets-on",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
